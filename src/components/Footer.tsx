@@ -62,6 +62,21 @@ const languages: ILanguage[] = [
         src: "https://flagcdn.com/pl.svg",
         height: 20,
         onClick: () => console.log("WIP")
+    },
+    {
+        src: "https://flagcdn.com/gb.svg",
+        height: 20,
+        onClick: () => console.log("WIP")
+    },
+    {
+        src: "https://flagcdn.com/fr.svg",
+        height: 20,
+        onClick: () => console.log("WIP")
+    },
+    {
+        src: "https://flagcdn.com/it.svg",
+        height: 20,
+        onClick: () => console.log("WIP")
     }
 ]
 
@@ -125,6 +140,7 @@ const FooterLayout = (props: IFooterLayoutProps) => (
                 {props.languages.map((language, index) => (
                     <img
                         key={`language_${index}`}
+                        className="languageFlag"
                         onClick={language.onClick}
                         src={language.src}
                         height={language.height}

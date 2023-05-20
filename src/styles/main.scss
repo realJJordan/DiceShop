@@ -18,9 +18,7 @@ header {
         display: none;
     }
 
-    .search {
-
-    }
+    .search {}
 
     .logo {
         display: flex;
@@ -34,15 +32,9 @@ header {
         }
     }
 
-    .user-account {
+    .user-account {}
 
-
-    }
-
-    .cart {
-
-
-    }
+    .cart {}
 }
 
 nav {
@@ -57,21 +49,21 @@ nav {
         padding: 0;
         display: flex;
         justify-content: space-between;
-    
+
         li {
             margin-right: 10px;
-        
+
             a {
                 text-decoration: none;
-                color:white;
-              }
-            
+                color: white;
+            }
+
             a:visited {
                 text-decoration: none;
                 color: white;
             }
-          }
-    }  
+        }
+    }
 }
 
 #root {
@@ -123,6 +115,10 @@ nav {
         .socialContainer {
             display: flex;
             gap: 5px;
+
+            .languageFlag {
+                border: 1px solid black;
+            }
 
             a {
                 color: black;
