@@ -37,9 +37,10 @@ header {
             padding: 0;
             display: flex;
             justify-content: space-between;
-
+            
             li {
                 margin: 0 20px 0 20px;
+                list-style-type: none;
 
                 a {
                     text-decoration: none;
@@ -72,10 +73,16 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        list-style-type: none;
 
         .category {
             color: #e2e2e2;
             text-decoration: none;
+
+            ul {
+                list-style-type: none;
+            }
+
         }
 
         .category:visited {
@@ -144,6 +151,10 @@ header {
         .socialContainer {
             display: flex;
             gap: 5px;
+
+            .languageFlag {
+                border: 1px solid black;
+            }
 
             a {
                 color: black;

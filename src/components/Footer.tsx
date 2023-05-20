@@ -30,7 +30,7 @@ const customerServiceLinks: ILinks[] = [
     }
 ]
 
-const diceShopLinks: ILinks[] = [
+const brandLinks: ILinks[] = [
     {
         label: "O nas",
         link: "wip"
@@ -57,11 +57,55 @@ const diceShopLinks: ILinks[] = [
     }
 ]
 
+const languages: ILanguage[] = [
+    {
+        src: "https://flagcdn.com/pl.svg",
+        height: 20,
+        onClick: () => console.log("WIP")
+    },
+    {
+        src: "https://flagcdn.com/gb.svg",
+        height: 20,
+        onClick: () => console.log("WIP")
+    },
+    {
+        src: "https://flagcdn.com/fr.svg",
+        height: 20,
+        onClick: () => console.log("WIP")
+    },
+    {
+        src: "https://flagcdn.com/it.svg",
+        height: 20,
+        onClick: () => console.log("WIP")
+    }
+]
+
+const socialLinks: ISocial[] = [
+    {
+        icon: <FacebookIcon />,
+        link: "https://www.facebook.com/diceshoppl"
+    },
+    {
+        icon: <TwitterIcon />,
+        link: "https://twitter.com/pl_diceshop"
+    },
+    {
+        icon: <YoutubeIcon />,
+        link: "https://www.youtube.com/user/diceshop_user"
+    },
+    {
+        icon: <InstagramIcon />,
+        link: "https://www.instagram.com/diceshop_pl"
+    }
+]
+
 const Footer = () => {
 
     const layoutProps: IFooterLayoutProps = {
         customerServiceLinks,
-        diceShopLinks
+        brandLinks,
+        socialLinks,
+        languages
     }
 
     return <FooterLayout {...layoutProps} />
@@ -72,8 +116,8 @@ const FooterLayout = (props: IFooterLayoutProps) => (
         <div className="section">
             <b className="title">Obsługa Klienta</b>
             <ul className="linksList">
-                {props.customerServiceLinks.map(link => (
-                    <li className="linkRow">
+                {props.customerServiceLinks.map((link, index) => (
+                    <li key={`customerServiceLink_${index}`} className="linkRow">
                         <a className="link" href={link.link}>{link.label}</a>
                     </li>
                 ))}
@@ -82,8 +126,8 @@ const FooterLayout = (props: IFooterLayoutProps) => (
         <div className="section">
             <b className="title">DiceShop</b>
             <ul className="linksList">
-                {props.customerServiceLinks.map(link => (
-                    <li className="linkRow">
+                {props.brandLinks.map((link, index) => (
+                    <li key={`brandLink_${index}`} className="linkRow">
                         <a className="link" href={link.link}>{link.label}</a>
                     </li>
                 ))}
@@ -92,14 +136,24 @@ const FooterLayout = (props: IFooterLayoutProps) => (
 
         <div className="section">
             <b>Parlez vous francais?</b>
+            <div className="socialContainer">
+                {props.languages.map((language, index) => (
+                    <img
+                        key={`language_${index}`}
+                        className="languageFlag"
+                        onClick={language.onClick}
+                        src={language.src}
+                        height={language.height}
+                    />
+                ))}
+            </div>
         </div>
         <div className="section">
             <b>Obserwuj nas!</b>
             <div className="socialContainer">
-                <a className="socialLink" href="https://www.facebook.com/diceshoppl"><FacebookIcon /></a>
-                <a className="socialLink" href="https://twitter.com/pl_diceshop"><TwitterIcon /></a>
-                <a className="socialLink" href="https://www.youtube.com/user/diceshop_user"><YoutubeIcon /></a>
-                <a className="socialLink" href="https://www.instagram.com/diceshop_pl"><InstagramIcon /></a>
+                {props.socialLinks.map((link, index) => (
+                    <a key={`socialLink_${index}`} className="socialLink" href={link.link}>{link.icon}</a>
+                ))}
             </div>
         </div>
     </div>
@@ -112,7 +166,20 @@ interface ILinks {
     link: string
 }
 
+interface ISocial {
+    icon: JSX.Element,
+    link: string
+}
+
+interface ILanguage {
+    src: string,
+    height: number,
+    onClick: () => void
+}
+
 interface IFooterLayoutProps {
     customerServiceLinks: ILinks[],
-    diceShopLinks: ILinks[]
+    brandLinks: ILinks[],
+    socialLinks: ISocial[],
+    languages: ILanguage[]
 }
