@@ -29,8 +29,10 @@ const Slide = (props: ISlideProps) => (
             src={props.imgUrl} />
         <div className="infoContainer">
             <h3>{props.title}</h3>
-            <span>{props.desc}</span>
+            <span className="desc" >{props.desc}</span>
+            <span className="spacer" />
             <a className="moreInfo" href={props.targetUrl}>Dowiedz się więcej</a>
+            <span className="spacer" />
         </div>
     </div>
 

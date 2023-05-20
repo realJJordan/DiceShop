@@ -50,6 +50,10 @@
     align-items: center;
     padding: 10px;
 
+    .desc {
+      font-size: 13px;
+    }
+
     .moreInfo {
       color: white;
       text-decoration: none;
@@ -58,6 +62,7 @@
       padding: 10px;
       transition: 0.2s;
       margin-top: 10px;
+      font-size: 14px;
 
       &:hover {
         background: white;
