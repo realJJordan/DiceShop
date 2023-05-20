@@ -1,3 +1,6 @@
+import CartIcon from "../icons/CartIcon"
+import UserIcon from "../icons/UserIcon"
+
 const NavBar = () => {
 
     return <NavBarLayout />
@@ -8,7 +11,7 @@ const NavBarLayout = () => (
         <header>
             <a href="#" className="hamburger">GiHamburgerMenu</a>
             <a href="#" className="search-mobile">BiSearch</a>
-            <div className="logo"><a href="#"><img src="../../public/logo.webp" alt="Logo sklepu" /></a></div>
+            <div className="logo"><a href="#"><img src="logo.webp" alt="Logo sklepu" /></a></div>
             <nav>
                 <ul>
                     <li><a href="#">Strona główna</a></li>
@@ -21,8 +24,8 @@ const NavBarLayout = () => (
             </nav>
             <input className="search" type="text" placeholder="Szukaj..."/>
             <div className="user-cart">
-                <a href="#">FaUserCircle</a>
-                <a href="#">FaShoppingCart</a>
+                <a href="#" className="user"><UserIcon /></a>
+                <a href="#" className="cart"><CartIcon /></a>
             </div>
         </header>
     </div>
