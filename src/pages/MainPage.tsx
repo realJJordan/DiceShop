@@ -29,6 +29,8 @@ const MainPageLayout = (props: IMainPageLayoutProps) => (
                 <SwiperSlide key={`slide_${index}`}>{slide}</SwiperSlide>
             ))}
         </Swiper>
+
+        
     </div>
 )
 

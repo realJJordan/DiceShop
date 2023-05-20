@@ -3,7 +3,7 @@ const WarhammerSlide = () => {
         imgUrl: "https://www.games-workshop.com/resources/touts/2023-04-22/GW-Seraphon-Range-2023-04-22-Portal-All-bm_.jpg",
         alt: "Image depicts figurines from warhammer age of sigmar franchise",
         title: "Warhammer Age of Sigmar",
-        desc: "Odkryj świat Warhammer Age of Sigmar i wejdź do krainy niezliczonych legend.\n Zbierz swoją armię i wyrusz na podbój. Rzuć się w wir działań, strategii i magii. ",
+        desc: "Odkryj świat Warhammer Age of Sigmar i wejdź do krainy niezliczonych legend.\n Zbierz swoją armię i wyrusz na podbój.",
         targetUrl: "https://gprivate.com/6531u"
     }
 
