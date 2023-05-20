@@ -1,0 +1,4 @@
+GiHamburgerMenu - NavBar
+BiSearch - NavBar
+FaUserCircle - NavBar
+FaShoppingCart - NavBar
