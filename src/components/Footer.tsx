@@ -155,6 +155,7 @@ const FooterLayout = (props: IFooterLayoutProps) => (
                     <a key={`socialLink_${index}`} className="socialLink" href={link.link}>{link.icon}</a>
                 ))}
             </div>
+            <br /><b>ⓒ Jordan Jarzyński Paweł Wysocki 2023</b>
         </div>
     </div>
 )
