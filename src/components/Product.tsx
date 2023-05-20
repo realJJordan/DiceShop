@@ -1,8 +1,6 @@
 type TCategory = "Gry planszowe i towarzyskie" | "Karcianki kolekcjonerskie" | "Gry figurkowe i bitewne" | "Akcesoria"
 type TSubCategory = "Gry planszowe dla dzieci" | "Dodatki do gier" | "Rodzinne gry planszowe" | "Gry imprezowe i towarzyskie" | "Przygodowe gry planszowe" | "Strategiczne gry planszowe" | "Gry planszowe dla dorosłych"
 type TAgeRating = 8 | 12 | 16 | 18
-type TPlayerCount = 1 | 2 | 3 | 4
-type TTime = "15min" | "30min" | "1h" | "4h"
 
 interface IProductProps {
     title: string,
@@ -38,7 +36,7 @@ const ProductLayout = (props: IProductProps) => (
                     <span className="category">{props.category} / {props.subCategory}</span>
                     <span className="spacer" />
                     <div>
-                        <b>{props.title}</b>
+                        <b className="title">{props.title}</b>
                         <span> | od {props.ageRating} lat</span>
                     </div>
                     <span className="spacer" />
@@ -50,9 +48,11 @@ const ProductLayout = (props: IProductProps) => (
             </>
             :
             <>
+                <span className="spacer" />
                 <span className="category">{props.category} / {props.subCategory}</span>
-                <b>{props.title}</b>
+                <b className="title">{props.title}</b>
                 <span className="price">{props.price} zł</span>
+                <span className="spacer" />
             </>
         }
     </div>
