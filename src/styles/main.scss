@@ -11,6 +11,8 @@ header {
     box-shadow: 0px 2px 10px rgb(151, 151, 151);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0.5vw 10vw 0.5vw 10vw;
 
     .hamburger {
         display: none;
@@ -23,6 +25,8 @@ header {
     .logo {
         display: flex;
         justify-content: center;
+        width: 80%;
+
         img {
             margin: auto;
             width: 25%;
@@ -42,19 +46,92 @@ header {
 }
 
 nav {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    color: white;
+    padding: 0.5vw 10vw 0.5vw 10vw;
+
+
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
-      
+        justify-content: space-between;
+    
         li {
             margin-right: 10px;
-
+        
             a {
                 text-decoration: none;
+                color:white;
               }
+            
+            a:visited {
+                text-decoration: none;
+                color: white;
+            }
           }
     }  
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+}
+
+.pageRenderer {
+    flex-grow: 1;
+}
+
+.footer {
+    display: flex;
+    padding: 30px 0;
+    background: #f4f6f7;
+    gap: clamp(5px, 2%, 25px);
+
+    .section {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            margin-bottom: 5px;
+        }
+
+        .linksList {
+            margin: 0;
+
+            .linkRow {
+                list-style: none;
+
+                .link {
+                    color: #414042;
+                    text-decoration: none;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .socialContainer {
+            display: flex;
+            gap: 5px;
+
+            a {
+                color: black;
+                transition: 0.2s;
+
+                &:hover {
+                    color: #E30045;
+                }
+            }
+        }
+    }
 }
