@@ -104,6 +104,15 @@ header {
             text-decoration: none;
         }
     }
+
+    .subcategories-bar {
+        background-color: white;
+        z-index: 999;
+        width: 100%;
+        position: absolute;
+        margin: 0 0 0 -10vw;
+    }
+      
 }
 
 #root {
