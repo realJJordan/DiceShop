@@ -4,3 +4,51 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+#root {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+}
+
+.pageRenderer {
+    flex-grow: 1;
+}
+
+.footer {
+    display: flex;
+    padding: 30px 0;
+    background: #f4f6f7;
+    gap: clamp(5px, 2%, 25px);
+
+    .section {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            margin-bottom: 5px;
+        }
+
+        .linksList {
+            margin: 0;
+
+            .linkRow {
+                list-style: none;
+
+                .link {
+                    color: #414042;
+                    text-decoration: none;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

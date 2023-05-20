@@ -1,5 +1,5 @@
 const MainPage = () => {
-    
+
     return <MainPageLayout />
 }
 
