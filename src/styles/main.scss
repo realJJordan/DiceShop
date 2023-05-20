@@ -16,7 +16,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5vw 10vw 0.5vw 10vw;
+    padding: 0.5vw 10vw 0.5vw 12vw;
 
     .hamburger {
         display: none;
@@ -66,27 +66,46 @@ header {
         width: 25%;
     }
 
-    .user-cart {}
+    .user-cart {
+        display: flex;
+        justify-content: space-between;
+        .user {
+            padding: 0 15px 0 0;
+        }
+    }
 }
 
 .categories-bar {
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.5vw 10vw 0.5vw 10vw;
+    padding: 0 10%;
 
     .categories {
         display: flex;
         align-items: center;
         justify-content: space-between;
         list-style-type: none;
+        margin: 0;
+        height: 50px;
 
-        .category {
-            color: #e2e2e2;
-            text-decoration: none;
+        li {
+            height: 100%;
+            width: 25%;
+            display: flex;
+            align-items: center;
+            text-align: center;
 
-            ul {
-                list-style-type: none;
+            .category {
+                color: #e2e2e2;
+                text-decoration: none;
+                width: 100%;
+                ul {
+                    list-style-type: none;
+                }
             }
+        }
 
+        li:hover {
+            background-color: black;
         }
 
         .category:visited {
@@ -110,7 +129,33 @@ header {
         z-index: 999;
         width: 100%;
         position: absolute;
-        margin: 0 0 0 -10vw;
+        left: 0;
+
+        .subcategories {
+            padding: 0 12%;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+
+            li {
+                padding: 3px 3px;
+                text-align: center;
+                
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                a:visited {
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+        }
+
     }
       
 }
