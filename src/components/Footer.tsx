@@ -1,4 +1,7 @@
 import FacebookIcon from "../icons/FacebookIcon"
+import InstagramIcon from "../icons/InstagramIcon"
+import TwitterIcon from "../icons/TwitterIcon"
+import YoutubeIcon from "../icons/YoutubeIcon"
 
 const customerServiceLinks: ILinks[] = [
     {
@@ -88,11 +91,16 @@ const FooterLayout = (props: IFooterLayoutProps) => (
         </div>
 
         <div className="section">
-            <b>Parlez vous francais</b>
-            <FacebookIcon />
+            <b>Parlez vous francais?</b>
         </div>
         <div className="section">
-            <b>Obserwuj nas</b>
+            <b>Obserwuj nas!</b>
+            <div className="socialContainer">
+                <a className="socialLink" href="https://www.facebook.com/diceshoppl"><FacebookIcon /></a>
+                <a className="socialLink" href="https://twitter.com/pl_diceshop"><TwitterIcon /></a>
+                <a className="socialLink" href="https://www.youtube.com/user/diceshop_user"><YoutubeIcon /></a>
+                <a className="socialLink" href="https://www.instagram.com/diceshop_pl"><InstagramIcon /></a>
+            </div>
         </div>
     </div>
 )

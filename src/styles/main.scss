@@ -50,5 +50,19 @@ body {
                 }
             }
         }
+
+        .socialContainer {
+            display: flex;
+            gap: 5px;
+
+            a {
+                color: black;
+                transition: 0.2s;
+
+                &:hover {
+                    color: #E30045;
+                }
+            }
+        }
     }
 }
