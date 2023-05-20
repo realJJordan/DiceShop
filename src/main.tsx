@@ -6,6 +6,7 @@ import MainPage from './pages/MainPage';
 import ErrorPage from './pages/ErrorPage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import CategoriesBar from './components/CategoriesBar';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <NavBar />
+    <CategoriesBar />
     <div className='pageRenderer'>
       <RouterProvider router={router} />
     </div>
